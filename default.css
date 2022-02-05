@@ -870,7 +870,7 @@ h2 {
 /*Blur backdrops, feel free to edit the intensity of the filter values*/
 
 .backdropImage {
-  -webkit-filter: blur(10px) saturate(110%) contrast(110%) brightness(95%);
+  -webkit-filter: blur(2px) saturate(110%) contrast(110%) brightness(95%);
   filter: blur(2px) saturate(110%) contrast(110%) brightness(95%);
 }
 
@@ -1492,6 +1492,17 @@ h2 {
   background-size: cover !important;
 }
 
+/* Narrow the login form */
+loginPage .readOnlyContent, #loginPage form {max-width: 22em;}
+
+/* Hide "please login" text, margin is to prevent login form moving too far up */
+loginPage h1 {display: none}
+loginPage .padded-left.padded-right.padded-bottom-page {margin-top: 50px}
+
+/* Hide "manual" and "forgot" buttons */
+loginPage .raised.cancel.block.btnManual.emby-button {display: none}
+loginPage .raised.cancel.block.btnForgotPassword.emby-button {display: none}
+
 /*Theming for the dashboard*/
 
 .paperList,
@@ -1651,3 +1662,23 @@ select#files_to_keep,
 select#user_list_for_add {
   color: white !important;
 }
+
+/*ANIMATIONS*/
+/*Fade as images load*/
+.blurhash-canvas {
+    transition: 0.2s;
+}
+.cardImageContainer {
+    transition: 0.7s;
+}
+.checkboxOutline,
+.emby-input,
+.emby-textarea,
+.emby-select-withcolor,
+.selectLabel
+.inputLabel,
+.textareaLabel {
+  transition: 0.1s;
+}
+
+
