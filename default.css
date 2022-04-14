@@ -1,3 +1,16 @@
+/*Fonts */
+@import url("https://cdn.jsdelivr.net/gh/prayag17/Jellyfin-Icons@latest/Font%20Awesome/light.css");
+@import url("./src/Raleway.css");
+@import url("./src/Montserrat.css");
+html,
+body,
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", "Raleway", sans-serif;
+}
+
 .pageTitleWithDefaultLogo {
     background-image: url(https://i.postimg.cc/d18w7mPV/cine.png);
 }
@@ -57,16 +70,3 @@ div.personCard > :first-child > :first-child { display: none; }
 /Custom Border Color/
 
 .emby-input, .emby-textarea, .emby-select { border-color: #d00000; }
-
-/*Fonts */
-@import url("https://cdn.jsdelivr.net/gh/prayag17/Jellyfin-Icons@latest/Font%20Awesome/light.css");
-@import url("./src/Raleway.css");
-@import url("./src/Montserrat.css");
-html,
-body,
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Montserrat", "Raleway", sans-serif;
-}
