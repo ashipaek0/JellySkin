@@ -1,14 +1,20 @@
-/*Fonts */
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/base.css');
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/rounding.css');
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/header/header_transparent.css');
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/type/colorful.css');
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/progress/floating.css');
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/effects/hoverglow.css');
 @import url("https://cdn.jsdelivr.net/gh/prayag17/Jellyfin-Icons@latest/Font%20Awesome/light.css");
 @import url("./src/Raleway.css");
 @import url("./src/Montserrat.css");
-html,
-body,
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Montserrat", "Raleway", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap'); body, h1, h2, h3, h4 {
+  font-family: 'Quicksand', sans-serif;
+}
+
+:root {
+  --deftraback: rgba(229, 9, 20) !important;
+  --rounding: 6px;
+  --accent: #E50914;
 }
 
 .pageTitleWithDefaultLogo {
@@ -19,9 +25,8 @@ h4 {
         white-space: normal;
 }
 
-/.Scrolling Text/
 /.homePage::before {
-  content: "TEXT GOES HERE";
+  content: "UCL:  Atleti v Man City BT Sport 2, SS Grandstand; Liverpool v Benfica on BT Sport 3, SS Premier League";
   animation: scrolling-animation 25s linear infinite;
   display: block;
   font-size: 1em;
@@ -37,36 +42,288 @@ h4 {
   }
 }
 
-/Reduce Live TV Channel Width/
-.channelsContainer { max-width: 8em; }
+/*Rounded corners on pretty much everything*/
+.formDialogHeader {
+  border-top-left-radius: var(--rounding);
+  border-top-right-radius: var(--rounding);
+}
+.formDialogFooter {
+  border-bottom-left-radius: var(--rounding);
+  border-bottom-right-radius: var(--rounding);
+}
+.cardOverlayContainer {
+    border-radius: var(--rounding) !important;
+}
+.primaryImageWrapper > img,
+.toast,
+.paperList,
+.cardContent,
+.sessionNowPlayingInnerContent, 
+.listItem:hover, 
+.cardImage,
+.fab,
+.raised,
+.multiSelectCheckboxOutline,
+.itemSelectionPanel,
+.cardContent-button, 
+.cardContent-shadow, 
+.itemDetailImage, 
+.cardOverlayButton-hover,
+.cardImageContainer,
+.cardPadder,
+.listItemImage,
+.listItemImageButton,
+.listItemButton,
+.headerButton,
+.paper-icon-button-light,
+.innerCardFooter,
+.blurhash-canvas,
+.dialog,
+.countIndicator,
+.playedIndicator,
+.listItemIcon,
+.listItem-border,
+.button-flat,
+.visualCardBox,
+.checkboxOutline,
+.emby-select-withcolor,
+.chapterThumbTextContainer,
+.chapterThumbContainer,
+.chapterThumb,
+.emby-input, 
+.emby-textarea, 
+.emby-select-withcolor,
+.nowPlayingPageImage,
+.upNextDialog-poster-img,
+.upNextContainer,
+.cardOverlayButtonIcon {
+  border-radius: var(--rounding) !important;
+}
+.osdPoster img {
+  border-radius: var(--rounding); border: none;
+}
+.mdl-slider::-moz-range-thumb {
+  border-radius: var(--rounding);
+}
+.mdl-slider::-ms-thumb {
+  border-radius: var(--rounding);
+}
+.mdl-slider::-webkit-slider-thumb {
+  border-radius: var(--rounding);
+}
 
-/Transparent Top Menu/
+div[data-role="controlgroup"] a[data-role="button"]:first-child {
+    border-bottom-left-radius: var(--rounding);
+    border-top-left-radius: var(--rounding);
+}
+div[data-role="controlgroup"] a[data-role="button"]:last-child {
+    border-bottom-right-radius: var(--rounding);
+    border-top-right-radius: var(--rounding);
+}
+#dashboardPage .cardContent, #dashboardPage .sessionNowPlayingInnerContent {
+    border-radius: var(--rounding) var(--rounding) 0 0 !important;
+}
+#divVirtualFolders .cardImageContainer, #divVirtualFolders .cardContent {
+    border-radius: var(--rounding) var(--rounding) 0 0 !important;
+}
+#userProfilesPage .cardImage, #userProfilesPage .cardContent {
+    border-radius: var(--rounding) var(--rounding) 0 0 !important;
+}
+
+#similarCollapsible { display: none; }
+#castCollapsible { display: none; }
+
 .skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred {background:none; background-color:rgba(0, 0, 0, 0);}
 .skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.noHomeButtonHeader {background:none; background-color:rgba(0, 0, 0, 0);}
 
-/Pictureless Cast & Crew/
-#castContent .card.overflowPortraitCard { width: 4.2cm; font-size: 90%; }
+/* Adjust both "size-adjust" and "size" to modify size */
+.headerTabs.sectionTabs {text-size-adjust: 110%;  font-size: 110%;}
+.pageTitle {margin-top: auto; margin-bottom: auto;}
+.emby-tab-button {padding: 1.75em 1.7em;}
 
-#castContent .personCard { width: auto; }
+.cardContent-button,
+.itemDetailImage {
+  border-radius: 0.25em;
+}
 
-#castContent .personCard .cardBox { margin-bottom: 0px; margin-right: 0px; }
+/*Narrow the login form, size according to display size (bigger on mobile)*/
+#loginPage .readOnlyContent,
+#loginPage form {
+  max-width: 22em;
+}
 
-#castContent { flex-wrap: wrap; max-height: 9.75em; }
+/*Hide "please login" text, margin is to prevent login form moving too far up*/
+#loginPage h1 {
+  display: none
+}
+#loginPage .padded-left.padded-right.padded-bottom-page {
+  margin-top: 50px
+}
 
-div.personCard > :first-child > :first-child { display: none; }
+/*Hide "manual" and "forgot" buttons}*/
+#loginPage .raised.cancel.block.btnForgotPassword.emby-button {
+  display: none
+}
 
-.itemDetailPage .cardText { text-align: left; }
+/*Login background*/
+#loginPage {
+  background: url(https://i.postimg.cc/PxsytcGn/wallhaven-0w2de6.jpg) !important; 
+  background-size: cover !important;
+}
 
-.itemDetailPage .textActionButton { text-align: left; }
+.itemProgressBarForeground {
+  background: var(--accent) !important;
+}
 
+/*Theme buttons and cards*/
+.navMenuOption-selected,
+.selectionCommandsPanel {
+  background: var(--accent) !important;
+}
 
-/Right Header Color/
+::-webkit-scrollbar-thumb {
+  background: var(--accent) !important;
+}
+.page {
+  padding-bottom: 0 !important;
+}
 
-.headerRight { color: red; }
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
 
-/General Page Custom Color/
-.dashboardGeneralForm { color: red; }
+.button-link {
+  color: white !important;
+}
 
-/Custom Border Color/
+.mdl-slider::-webkit-slider-thumb {
+  background: var(--accent);
+}
 
-.emby-input, .emby-textarea, .emby-select { border-color: #d00000; }
+.emby-input:focus,
+.emby-textarea:focus {
+  border-color: var(--accent);
+}
+
+.emby-input,
+.emby-textarea {
+  color: inherit;
+  border: 0.07em solid var(--accent);
+  border-radius: var(--rounding);
+  box-shadow: 0 0 8px 0px black !important;
+  background: rgba(0, 0, 0, 0.2) !important;
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px);
+  text-shadow: 0 0 5px black;
+}
+
+.emby-select-withcolor {
+  border: 0.07em solid var(--accent);
+}
+
+.paper-icon-button-light:hover:not(:disabled) {
+  color: var(--accent);
+  background-color: #2020208c;
+  box-shadow: 0 0 15px -2px black;
+}
+
+.raised {
+  background: var(--accent) !important;
+  border-radius: var(--rounding) !important;
+}
+
+.navMenuOption-selected {
+  background: var(--accent) !important;
+}
+
+#itemDetailPage .button-flat:hover {
+  color: var(--accent);
+  transform: scale(1.5);
+}
+
+.countIndicator,
+.fullSyncIndicator,
+.playedIndicator {
+  background: #ffffff;
+  color: var(--accent);
+}
+
+.playedIndicator {
+  background: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 0 15px -2px black;
+}
+
+button.emby-tab-button.emby-button.emby-tab-button-active:hover {
+  color: var(--accent) !important;
+}
+
+.emby-tab-button.show-focus:focus,
+.emby-tab-button:hover {
+  color: var(--accent) !important;
+}
+
+/*Progress Bar*/
+
+.emby-checkbox:checked + span + .checkboxOutline {
+  background-color: var(--accent) !important;
+}
+
+.mdl-slider-background-lower {
+  background-color: var(--accent) !important;
+}
+
+.paper-icon-button-light:hover:not(:disabled) {
+  color: var(--accent);
+  background-color: #2020208c;
+  box-shadow: 0 0 15px -2px black;
+}
+
+.navMenuOption-selected {
+  background: var(--accent-selected) !important;
+}
+
+.navMenuOption::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: var(--accent);
+  z-index: -1;
+  left: 0;
+  opacity: 0%;
+  transition: opacity 0.2s;
+}
+
+.cardImageIcon {
+  background: var(--accent);
+  color: transparent;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+.navMenuOption-selected {
+  background: var(--accent-selected) !important;
+}
+
+span.material-icons.detailButton-icon.check.playstatebutton-icon-played,
+span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
+  background: var(--accent-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #d60000;
+}
+
+.raised::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  background: var(--accent);
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
