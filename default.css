@@ -25,18 +25,6 @@
         white-space: normal;
 }
 
-.homePage::before {
-  content: "Fixtures:
-12:30 PM Spurs v Brighton - SS Prem Lge, BT Sport 1
-3:00 PM Man Utd v Norwich - SS Prem Lge, USA
-3:00 PM Saints v Arsenal - CNBC, RMC 1,
-3:30 PM City v Liverpool - SS Variety 2, BBC One";
-  animation: scrolling-animation 25s linear infinite;
-  display: block;
-  font-size: 1em;
-  font-weight: 200;
-}
-
 @keyframes scrolling-animation {
   from {
     transform: translateX(100%);
