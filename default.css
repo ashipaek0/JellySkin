@@ -141,7 +141,7 @@ div[data-role="controlgroup"] a[data-role="button"]:last-child {
 /*Narrow the login form, size according to display size (bigger on mobile)*/
 #loginPage .readOnlyContent,
 #loginPage form {
-  max-width: 22em;
+  max-width: 30em;
 }
 
 /*Hide "please login" text, margin is to prevent login form moving too far up*/
