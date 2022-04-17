@@ -319,3 +319,5 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
 }
+
+.dashboardGeneralForm { color: white; }
