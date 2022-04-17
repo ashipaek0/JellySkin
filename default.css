@@ -357,11 +357,6 @@ border-radius: 0.2em;
     flex-wrap: wrap;
   }
 
-@media (max-width: 75em) and (orientation: landscape){
-.section0 {
-    display: none;
-} }
-
 @media (max-width: 75em){
 .section0 {
     display: none;
