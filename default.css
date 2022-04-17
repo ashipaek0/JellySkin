@@ -357,11 +357,6 @@ border-radius: 0.2em;
     flex-wrap: wrap;
   }
 
-@media (max-width: 75em){
-.section0 {
-    display: none;
-}    }
-
 /* Hide right menu unless hovering */
  .headerRight:not(:hover)  {
   opacity: 0;
